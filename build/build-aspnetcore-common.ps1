@@ -25,6 +25,15 @@ $solutionArray += [PsObject]@{ File = $rootFolder + "/../aspnet-core/LINGYUN.Mic
 $solutionArray += [PsObject]@{ File = $rootFolder + "/../aspnet-core/LINGYUN.MicroService.SingleProject.sln" }
 $solutionArray += [PsObject]@{ File = $rootFolder + "/../gateways/internal/LINGYUN.MicroService.Internal.ApiGateway/LINGYUN.MicroService.Internal.ApiGateway.sln" }
 
+[PsObject[]]$MigrationsArray = @()
+$MigrationsArray += [PsObject]@{ Path = $rootFolder + "/../aspnet-core/Migrations/LY.MicroService.BackendAdmin.EntityFrameworkCore/"; Service = "admin" }
+$MigrationsArray += [PsObject]@{ Path = $rootFolder + "/../aspnet-core/Migrations/LY.MicroService.AuthServer.EntityFrameworkCore/"; Service = "authserver" }
+$MigrationsArray += [PsObject]@{ Path = $rootFolder + "/../aspnet-core/Migrations/LY.MicroService.identityServer.EntityFrameworkCore/"; Service = "identityserver" }
+$MigrationsArray += [PsObject]@{ Path = $rootFolder + "/../aspnet-core/Migrations/LY.MicroService.LocalizationManagement.EntityFrameworkCore/"; Service = "localization" }
+$MigrationsArray += [PsObject]@{ Path = $rootFolder + "/../aspnet-core/Migrations/LY.MicroService.Platform.EntityFrameworkCore/"; Service = "platform" }
+$MigrationsArray += [PsObject]@{ Path = $rootFolder + "/../aspnet-core/Migrations/LY.MicroService.RealtimeMessage.EntityFrameworkCore/"; Service = "messages" }
+$MigrationsArray += [PsObject]@{ Path = $rootFolder + "/../aspnet-core/Migrations/LY.MicroService.TaskManagement.EntityFrameworkCore/"; Service = "task-management" }
+
 Write-host ""
 Write-host ":::::::::::::: !!! You are in development mode !!! ::::::::::::::" -ForegroundColor red -BackgroundColor  yellow
 Write-host "" 
